@@ -9,6 +9,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 public class JpademoApplication {
 
 	public static void main(String[] args) {
+		new Profiler.Builder()
+		  .profilingGroupName("springbootfargate")
+		  .build().start();
 		SpringApplication.run(JpademoApplication.class, args);
 	}
 
